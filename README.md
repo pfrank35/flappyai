@@ -1,15 +1,10 @@
 # Flappy Bird AI
 
-A Flappy Bird-style game built with Python and Pygame. It has a manual-play mode, a simple gap-following AI, and a separate mode that evolves bird controllers with NEAT.
+A Flappy Bird-style game built with Python and Pygame. It has a manual-play mode, a simple gap-following AI, and a separate mode that evolves bird controllers with NEAT. This project was inspired by the YouTuber Code Bullet. Their game looks much nicer, and their learning algorithm runs much faster than mine, but my goal was to learn NEAT.
 
 ## Demo
 
-Add the demo recording at `assets/demo.mp4` to display it here:
-
-<video controls width="640">
-  <source src="assets\Timeline 1.mp4" type="video/mp4">
-  Your browser does not support embedded video. You can also <a href="assets\Timeline 1.mp4">open the demo video</a>.
-</video>
+[Watch the demo on YouTube](https://youtu.be/oIpW7BD1_HQ)
 
 ## What I built
 
@@ -20,7 +15,7 @@ Add the demo recording at `assets/demo.mp4` to display it here:
 
 ## What was challenging
 
-One challenge was turning the bird and pipe positions into useful, normalized inputs for a neural network. The training loop was also more involved than the single-bird game: each bird needs its own network and score, and those records must stay aligned as birds are eliminated. I also had to make fitness rewards encourage both staying alive and successfully navigating pipes.
+One challenge was learning NEAT. My first few runs went through 50 generations without any birds making it past the second pipe. I spent a lot of time trying to figure out why. In the end, I increased the population size from 50 to 100 and eventually to 1,000. I think that with only 50 individuals, I wasn't getting enough variation for one to stumble upon a viable solution. With 1,000, that changed, and now I get fairly reliable results.
 
 ## Run it
 
@@ -76,4 +71,3 @@ Training displays a population of birds and their progress. The current configur
 - `main.py` — playable game and simple AI mode
 - `src/training.py` — NEAT population training
 - `neat_config.txt` — NEAT algorithm and population settings
-- `assets/demo.mp4` — add the demo recording here
