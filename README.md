@@ -7,8 +7,8 @@ A Flappy Bird-style game built with Python and Pygame. It has a manual-play mode
 Add the demo recording at `assets/demo.mp4` to display it here:
 
 <video controls width="640">
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support embedded video. You can also <a href="assets/demo.mp4">open the demo video</a>.
+  <source src="assets\Timeline 1.mp4" type="video/mp4">
+  Your browser does not support embedded video. You can also <a href="assets\Timeline 1.mp4">open the demo video</a>.
 </video>
 
 ## What I built
